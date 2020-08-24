@@ -20,7 +20,6 @@ class MyHomeScreen extends StatefulWidget {
 }
 
 class _MyHomeScreenState extends State<MyHomeScreen> {
-
   TextEditingController _locationController = TextEditingController();
 
   Future<ResponseJadwal> getJadwal({String location}) async {
@@ -42,27 +41,36 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
   Widget build(BuildContext context) {
     final header = Stack(
       children: <Widget>[
-        Container(
-          height: MediaQuery
-              .of(context)
-              .size
-              .width - 120,
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.only(
-                  bottomRight: Radius.circular(30.0),
-                  bottomLeft: Radius.circular(30.0)),
-              boxShadow: [
-                BoxShadow(
-                    blurRadius: 6.0,
-                    offset: Offset(0.0, 2.0),
-                    color: Colors.black26
+        Padding(
+          padding: const EdgeInsets.only(
+              left: 8.0,
+              right: 8.0,
+              top: 10.0
+          ),
+          child: Container(
+            height: MediaQuery
+                .of(context)
+                .size
+                .width - 120,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.only(
+                    bottomRight: Radius.circular(30.0),
+                    topLeft: Radius.circular(30.0),
+                    topRight: Radius.circular(30.0),
+                    bottomLeft: Radius.circular(30.0)),
+                boxShadow: [
+                  BoxShadow(
+                      blurRadius: 6.0,
+                      offset: Offset(0.0, 2.0),
+                      color: Colors.black26
+                  )
+                ],
+                image: DecorationImage(
+                    fit: BoxFit.cover,
+                    image: NetworkImage(
+                        'https://image.freepik.com/free-photo/blue-mosque-istanbul_1157-8842.jpg')
                 )
-              ],
-              image: DecorationImage(
-                  fit: BoxFit.cover,
-                  image: NetworkImage(
-                      'https://i.pinimg.com/originals/f6/4a/36/f64a368af3e8fd29a1b6285f3915c7d4.jpg')
-              )
+            ),
           ),
         ),
         Padding(

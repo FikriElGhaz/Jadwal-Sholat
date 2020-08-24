@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
-final baseTextStyle = const TextStyle(
-    fontFamily: 'Roboto', color: Colors.white
-);
+final baseTextStyle = const TextStyle(fontFamily: 'Open Sans', color: Colors.white);
 
 final styleCityHeader = baseTextStyle.copyWith(
     fontSize: 40.0,

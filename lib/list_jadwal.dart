@@ -11,7 +11,7 @@ class ListJadwal extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 6.0),
       child: Container(
-        height: 70.0,
+        height: 90.0,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10.0),
             boxShadow: [BoxShadow(color:
@@ -20,9 +20,7 @@ class ListJadwal extends StatelessWidget {
             gradient: LinearGradient(
                 begin: Alignment.topRight,
                 end: Alignment.bottomLeft,
-                colors: [Color(0xff60a3bc),
-                  Color(0xff808080)
-                ]
+                colors: [Color(0xff273c75), Color(0xff192a56)]
             )
         ),
         child: Padding(
@@ -30,8 +28,8 @@ class ListJadwal extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
-              Text(waktu, style: styleListText),
-              Text(jam, style: styleListText)
+              Text(jam, style: styleListText),
+              Text(waktu, style: styleListText)
             ],
           ),
         ),
